@@ -1,0 +1,13 @@
+/interface bridge 
+remove 0 #remove default bridge
+add name=bridge0
+add name=bridge1
+
+
+/interface bridge port 
+remove numbers=0,1,2,8,9
+add bridge=bridge0 interface=ether9
+add bridge=bridge0 interface=ether10
+add bridge=bridge1 interface=ether1
+add bridge=bridge1 interface=ether2
+add bridge=bridge1 interface=ether3
