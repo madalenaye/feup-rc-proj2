@@ -1,5 +1,5 @@
 /interface bridge 
-remove 0 #remove default bridge
+remove 0
 add name=bridge0
 add name=bridge1
 

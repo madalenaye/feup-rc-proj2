@@ -19,3 +19,5 @@ ip neigh flush all #flush arp table just in case
 
 sysctl net.ipv4.ip_forward=1
 sysctl net.ipv4.icmp_echo_ignore_broadcasts=0
+
+echo 'nameserver 172.16.2.1' > /etc/resolv.conf
