@@ -1,0 +1,18 @@
+version: '3.6'
+services:
+    vsftpd:
+      image: fauria/vsftpd
+      environment:
+        - FTP_USER=rcom
+        - FTP_PASS=rcom
+        - PASV_ENABLE=YES
+        - PASV_ADDRESS=192.168.1.172
+        - PASV_MIN_PORT=21200
+        - PASV_MAX_PORT=21210
+        - LOG_STDOUT=true
+      ports:
+        - 21:21
+        - "21200-21210:21200-21210"
+      volumes: 
+        - /srv/ftp:/home/vsftpd
+        - /var/log/ftp:/var/log/

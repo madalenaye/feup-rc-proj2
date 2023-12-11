@@ -12,7 +12,7 @@ FILE=files/pic1.jpg
 
 bin/download: download.c
 	mkdir -p ./bin
-	$(CC) $(CFLAGS) -o bin/download download.c
+	$(CC) $(CFLAGS) -g -o bin/download download.c
 
 run: bin/download
 	./bin/download ftp://$(HOST)/$(FILE)
